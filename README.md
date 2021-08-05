@@ -6,8 +6,6 @@ This document is written to allow anyone to use the RNA-seq analysis workflow I 
 You can run this workflow on your local computer or on a high performance computer
 if you have access to one.
 
-This workflow uses the following software packages: fastqc, multiqc, fastp, salmon and DESeq2.
-
 Software installation
 ----------------------
 This workflow requires the use of a Linux operating system.
@@ -74,4 +72,8 @@ Once they have finished running, you can move on to the next step.
 
 Analysing the RNA-seq data
 ----------------------
-You have two FASTQ files (one read pair because the FASTQ data is paired end data)
+You have two FASTQ files (one read pair because the FASTQ data that was downloaded using wget is paired end data).
+
+Firstly, we need to run fastqc to check the quality of the data we have. To do this, you need to be in the FASTQ_data directory (where your FASTQ files are located).
+
+Run this command `fastqc *fastq.gz -o QC` The * flag is a shortcut which allows us to run fastqc on all fastq.gz files within our current directory. The -o flag allows us to direct the output of fastqc into the QC directory we just created.
