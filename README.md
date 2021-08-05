@@ -70,7 +70,7 @@ Use the following commands to do this:
 For now, there is no reason to worry about where these URLs came from, the wget commands should not take long to run (1-5 minutes depending on internet speed).
 Once they have finished running, you can move on to the next step.
 
-Running FASTQC
+Quality control (QC)
 ----------------------
 
 Firstly, we need to run FASTQC to check the quality of the data we have. To do this, you need to be in the FASTQ_data directory (where your FASTQ files are located).
@@ -79,7 +79,13 @@ Before we run FASTQC we can make a new directory for the fastqc output files. Ty
 
 Run this command:  `fastqc *fastq.gz -o QC` The `*` flag is a shortcut which allows us to run fastqc on all fastq.gz files within our current directory. The `-o` option allows us to direct the output of fastqc into the QC directory we just created.
 
-You can view the fastqc output files by viewing the following files which are now located in the QC directory: SRR3437051_1_fastqc.html  SRR3437051_2_fastqc.html.
+You can view the fastqc output by viewing the following files which are now located in the QC directory: `SRR3437051_1_fastqc.html` and `SRR3437051_2_fastqc.html`.
+
+To view the FASTQC reports in a single report, we can use multiqc.
+
+To run multiqc, use the following command: `multiqc QC`
+
+This will create a file called `multiqc_report.html` which you can view.
 
 Running fastp
 ----------------------
