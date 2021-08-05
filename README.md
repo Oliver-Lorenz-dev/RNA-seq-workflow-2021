@@ -8,3 +8,11 @@ if you have access to one.
 
 Software installation
 ----------------------
+This workflow requires the use of a Linux operating system.
+
+We will install the required bioinformatics tools using Miniconda.
+
+Miniconda installation
+----------------------
+In your linux terminal type: `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`
+This installs miniconda.
