@@ -74,6 +74,22 @@ Analysing the RNA-seq data
 ----------------------
 You have two FASTQ files (one read pair because the FASTQ data that was downloaded using wget is paired end data).
 
-Firstly, we need to run fastqc to check the quality of the data we have. To do this, you need to be in the FASTQ_data directory (where your FASTQ files are located).
+Running FASTQC
+----------------------
 
-Run this command `fastqc *fastq.gz -o QC` The * flag is a shortcut which allows us to run fastqc on all fastq.gz files within our current directory. The -o flag allows us to direct the output of fastqc into the QC directory we just created.
+Firstly, we need to run FASTQC to check the quality of the data we have. To do this, you need to be in the FASTQ_data directory (where your FASTQ files are located).
+
+Before we run FASTQC we can make a new directory for the fastqc output files. Type `mkdir QC` to make a new directory.
+
+Run this command:  `fastqc *fastq.gz -o QC` The * flag is a shortcut which allows us to run fastqc on all fastq.gz files within our current directory. The -o flag allows us to direct the output of fastqc into the QC directory we just created.
+
+You can view the fastqc output files by viewing the following files which are now located in the QC directory: SRR3437051_1_fastqc.html  SRR3437051_2_fastqc.html.
+
+Running fastp
+----------------------
+
+To improve the quality of your FASTQ data, we can use pre processing algorithms (such as fastp) to remove low quality reads from the FASTQ data.
+
+To run fastp on the pair of read files, use the following command:
+
+`
