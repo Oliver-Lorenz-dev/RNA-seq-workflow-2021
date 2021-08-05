@@ -98,6 +98,10 @@ Run fastp:
 
 The `-i` and `-I` options are used to specify the first read and the second read in the pair. The `-o` option does the same and specifies the output directory. The `--detect_adapter_for_pe` option enables the automatic detection (and removal) of adapter sequences. The `-c` option is a base correction option which can be used on paired end data only.
 
+We can now remove the original FASTQ files. To do this, check you are in the FASTQ_data directory and use the following command:
+
+`rm *fastq.gz`
+
 Running salmon
 ----------------------
 (WIP)
