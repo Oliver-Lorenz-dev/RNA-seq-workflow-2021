@@ -81,7 +81,7 @@ Firstly, we need to run FASTQC to check the quality of the data we have. To do t
 
 Before we run FASTQC we can make a new directory for the fastqc output files. Type `mkdir QC` to make a new directory.
 
-Run this command:  `fastqc *fastq.gz -o QC` The * flag is a shortcut which allows us to run fastqc on all fastq.gz files within our current directory. The -o flag allows us to direct the output of fastqc into the QC directory we just created.
+Run this command:  `fastqc *fastq.gz -o QC` The `*` flag is a shortcut which allows us to run fastqc on all fastq.gz files within our current directory. The `-o` option allows us to direct the output of fastqc into the QC directory we just created.
 
 You can view the fastqc output files by viewing the following files which are now located in the QC directory: SRR3437051_1_fastqc.html  SRR3437051_2_fastqc.html.
 
