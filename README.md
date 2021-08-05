@@ -22,5 +22,18 @@ Once you have downloaded the above shell script run it using the following comma
 
 Conda setup
 ----------------------
+First we need to create a conda environment. To do this type `conda create -n rna-seq`
 
+Then, we can add channels to the conda environment to make installing bioinformatics software easier.
+
+Use the following commands:
+
+`conda config --add channels default`
+
+`conda config --add channels bioconda`
+
+`conda config --add channels conda-forge`
+
+Installing bioinformatics software
+----------------------
 
