@@ -90,6 +90,14 @@ Running fastp
 
 To improve the quality of your FASTQ data, we can use pre processing algorithms (such as fastp) to remove low quality reads from the FASTQ data.
 
-To run fastp on the pair of read files, use the following command:
+To run fastp on the pair of read files, run the following commands from the FASTQ_data directory:
 
-`
+Make an output directory for the ouput files:
+
+`mkdir processed_reads`
+
+Run fastp:
+
+`fastp -i SRR3437051_1.fastq.gz -I SRR3437051_2.fastq.gz -o processed_reads/SRR3437051_1.fastq.gz -O processed_reads/SRR3437051_2.fastq.gz --detect_adapter_for_pe -c`
+
+The -i and -I options are used to specify the first read and the second read in the pair. The -o option does the same and specifies the output directory. The --detect_adapter_for_pe option enables the automatic detection (and removal) of adapter sequences. The -c option is a base correction option which can be used on paired end data only.
