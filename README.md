@@ -15,4 +15,12 @@ We will install the required bioinformatics tools using Miniconda.
 Miniconda installation
 ----------------------
 In your linux terminal type: `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`
-This installs miniconda.
+to install miniconda.
+
+Once you have downloaded the above shell script run it using the following command:
+`bash Miniconda3-latest-Linux-x86_64.sh`
+
+Conda setup
+----------------------
+
+
