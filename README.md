@@ -70,10 +70,6 @@ Use the following commands to do this:
 For now, there is no reason to worry about where these URLs came from, the wget commands should not take long to run (1-5 minutes depending on internet speed).
 Once they have finished running, you can move on to the next step.
 
-Analysing the RNA-seq data
-----------------------
-You have two FASTQ files (one read pair because the FASTQ data that was downloaded using wget is paired end data).
-
 Running FASTQC
 ----------------------
 
