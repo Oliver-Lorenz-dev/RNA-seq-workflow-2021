@@ -96,7 +96,7 @@ Run fastp:
 
 `fastp -i SRR3437051_1.fastq.gz -I SRR3437051_2.fastq.gz -o processed_reads/SRR3437051_1.fastq.gz -O processed_reads/SRR3437051_2.fastq.gz --detect_adapter_for_pe -c`
 
-The `-i` and `-I` options are used to specify the first read and the second read in the pair. The `-o` option does the same and specifies the output directory. The `--detect_adapter_for_pe` option enables the automatic detection (and removal) of adapter sequences. The `-c` option is a base correction option which can be used on paired end data only.
+The `-i` and `-I` options are used to specify the first read and the second read in the pair. The `-o` and `-O` options do the same and specify the output directory. The `--detect_adapter_for_pe` option enables the automatic detection (and removal) of adapter sequences. The `-c` option is a base correction option which can be used on paired end data only.
 
 We can now remove the original FASTQ files. To do this, check you are in the FASTQ_data directory and use the following command:
 
