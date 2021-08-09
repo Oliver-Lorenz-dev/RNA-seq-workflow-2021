@@ -87,7 +87,7 @@ To run multiqc, use the following command: `multiqc QC`
 
 This will create a file called `multiqc_report.html` which you can view.
 
-Running fastp (pre-processing
+Running fastp (pre-processing)
 ----------------------
 
 To improve the quality of your FASTQ data, we can use pre processing algorithms (such as fastp) to remove low quality reads from the FASTQ data.
