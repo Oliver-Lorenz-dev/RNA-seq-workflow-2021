@@ -87,7 +87,7 @@ To run multiqc, use the following command: `multiqc QC`
 
 This will create a file called `multiqc_report.html` which you can view.
 
-Running fastp
+Running fastp (pre-processing
 ----------------------
 
 To improve the quality of your FASTQ data, we can use pre processing algorithms (such as fastp) to remove low quality reads from the FASTQ data.
@@ -108,7 +108,7 @@ We can now remove the original FASTQ files. To do this, check you are in the FAS
 
 `rm *fastq.gz`
 
-Running salmon
+Running salmon (read quantification)
 ----------------------
 Salmon is a read quantification algorithm which performs quantification at the transcript level via a pseudo alignment algorithm. Therefore, salmon requires the human transcriptome before it can be used in it's quantification mode.
 
