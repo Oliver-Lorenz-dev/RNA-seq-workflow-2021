@@ -110,4 +110,9 @@ We can now remove the original FASTQ files. To do this, check you are in the FAS
 
 Running salmon
 ----------------------
+Salmon is a read quantification algorithm which performs quantification at the transcript level via a pseudo alignment algorithm. Therefore, salmon requires the human transcriptome before it can be used in it's quantification mode.
+
+To download the human transcriptome use the following command `
+
+
 (WIP)
