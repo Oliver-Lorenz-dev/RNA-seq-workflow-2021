@@ -124,7 +124,9 @@ The `-t` option specifies where the human transcriptome is located (`./` refers 
 
 Now that the index has been built, we can run salmon in it's quantification mode to quantify our reads. To do this, run the following command:
 
-`
+`salmon quant -i human_v38_index -l A -1 SRR3437051_1.fastq.gz -2 SRR3437051_2.fastq.gz -o read_counts`
+
+The `-i` option is to specify the location of the index we just built. The `-l` option is set to `A` to allow salmon to automatically detect the RNA-seq library type. The `-1` and `-2` options are used to specify the first and second read pairs. The `-o` option is used to specify an output directory. Your quantification files will be in the `read_counts` directory. Try running `ls read_counts` to see the salmon output files, the quant.sf file is the file which countains the read count data.
 
 
 (WIP)
