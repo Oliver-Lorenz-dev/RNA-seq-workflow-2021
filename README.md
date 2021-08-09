@@ -112,7 +112,19 @@ Running salmon
 ----------------------
 Salmon is a read quantification algorithm which performs quantification at the transcript level via a pseudo alignment algorithm. Therefore, salmon requires the human transcriptome before it can be used in it's quantification mode.
 
-To download the human transcriptome use the following command `
+Change into the processed_reads directory: `cd processed_reads`
+
+To download the human transcriptome use the following command ` wget http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.transcripts.fa.gz`
+
+Now that we have the human transcriptome, we can build the index which salmon requires to perform read quantification:
+
+`salmon index -t ./gencode.v38.transcripts.fa.gz -i human_v38_index --gencode`
+
+The `-t` option specifies where the human transcriptome is located (`./` refers to current directory). The `-i` option specifies the name of the salmon index. The `--gencode` option is used as we are using the gencode transcriptome in this workflow. This command will take a few minutes to run.
+
+Now that the index has been built, we can run salmon in it's quantification mode to quantify our reads. To do this, run the following command:
+
+`
 
 
 (WIP)
