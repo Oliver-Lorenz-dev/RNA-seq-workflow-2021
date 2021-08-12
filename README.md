@@ -130,5 +130,5 @@ The `-i` option is to specify the location of the index we just built. The `-l` 
 
 Running DESeq2 (Differential expression analysis)
 ----------------------
-To perform a differential expression analysis, we need two different samples to compare. Therefore, we need to run the read quantification workflow on another sample. To do this, use the commands in the BPH_analysis.sh script provided in the repo.
+To perform a differential expression analysis, we need two different samples to compare. Therefore, we need to run the read quantification workflow on another sample. To do this, use the commands in the workflow.sh script provided in the repo.
 
