@@ -128,5 +128,7 @@ Now that the index has been built, we can run salmon in it's quantification mode
 
 The `-i` option is to specify the location of the index we just built. The `-l` option is set to `A` to allow salmon to automatically detect the RNA-seq library type. The `-1` and `-2` options are used to specify the first and second read pairs. The `-o` option is used to specify an output directory. Your quantification files will be in the `read_counts` directory. Try running `ls read_counts` to see the salmon output files, the quant.sf file is the file which countains the read count data.
 
+Running DESeq2 (Differential expression analysis)
+----------------------
+To perform a differential expression analysis, we need two different samples to compare. Therefore, we need to run the read quantification workflow on another sample. To do this, use the commands in the BPH_analysis.sh script provided in the repo.
 
-(WIP)
