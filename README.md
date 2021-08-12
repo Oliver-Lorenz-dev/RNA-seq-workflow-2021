@@ -132,3 +132,5 @@ Running DESeq2 (Differential expression analysis)
 ----------------------
 To perform a differential expression analysis, we need two different samples to compare. Therefore, we need to run the read quantification workflow on another sample. To do this, use the commands in the workflow.sh script provided in the repo.
 
+Once you have ran the workflow.sh script you should have two quant.sf files in the processed_reads directory. The CaP sample quant.sf file is in the read_counts directory, the BPH sample quant.sf file is in the read_counts_2 directory
+
