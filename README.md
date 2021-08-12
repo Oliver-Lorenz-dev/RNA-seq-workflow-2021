@@ -130,7 +130,7 @@ The `-i` option is to specify the location of the index we just built. The `-l` 
 
 Running DESeq2 (Differential expression analysis)
 ----------------------
-To perform a differential expression analysis, we need two different samples to compare. Therefore, we need to run the read quantification workflow on more samples (at least 4 samples in total - 2 of each condition). To do this, use the commands in the workflow.sh script provided in the repo from the FASTQ_data directory.
+To perform a differential expression analysis, we need two different samples to compare. Therefore, we need to run the read quantification workflow on more samples (at least 4 samples in total - 2 of each condition). To do this, use the commands in the workflow.sh script provided in the repo from the FASTQ_data directory. This script will take some time to run - between 30 minutes and 1 hour.
 
 Once you have ran the workflow.sh script you should have four quant.sf files each in their own directories (SRR3437049, SRR3437050, SRR3437051, SRR3437052).
 
