@@ -215,3 +215,26 @@ PCA plot:
 
 `plotPCA(dds_var_transform , intgroup = 'progression_step')`
 
+The MA plot and PCA plot are available for you to look at in this repo. In addition, the dds_dif_exp_results variable should contain 2010 entries (i.e. 2010 differentially expressed genes).
+
+References
+--------------
+Andrews,S. (2010) Babraham Bioinformatics - FastQC A Quality Control tool for High Througput Sequence Data. Bioinformatics.babraham.ac.uk.
+
+Barrett,T. et al. (2013) NCBI GEO: archive for functional genomics data sets—up-date. Nucleic Acids Research, 41, D991-D995
+
+Chen,S. et al. (2018) fastp: an ultra-fast all-in-one FASTQ preprocessor. Bioinfor-matics, 34, i884-i890.
+
+Ewels,P. et al. (2016) MultiQC: summarize analysis results for multiple tools and samples in a single report. Bioinformatics, 32, 3047-3048.
+
+Frankish,A. et al. (2021) GENCODE 2021. Nucleic Acids Res, 49, D916-D923
+
+Love,M. et al. (2014) Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biology, 15.
+
+Patro,R. et al. (2017) Salmon provides fast and bias-aware quantification of tran-script expression. Nature Methods, 14, 417-419.
+
+Soneson,C. et al. (2015) Differential analyses for RNA-seq: transcript-level esti-mates improve gene-level inferences. F1000Research, 4, 1521.
+
+Stoesser,G. (1998) The EMBL nucleotide sequence database. Nucleic Acids Re-search, 26, 8-15.
+
+Yun,S. et al. (2017) Transcriptomic features of primary prostate cancer and their prognostic relevance to castration-resistant prostate cancer. Oncotarget, 8, 114845-114855.
