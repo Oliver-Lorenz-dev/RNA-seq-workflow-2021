@@ -140,9 +140,59 @@ Before we can read the files into R and run DESeq2, we need to create a file whi
 
 The make_gene_mapper.sh script should work on any version of the human gencode transcripts FASTA file.
 
+In addition, you will need to download the SraRunTable.txt file provided in the repo.
+
 Now we have everything we need to run DESeq2. 
 
 DESeq2 code:
 -------------
-(WIP)
+First, we need to load in the libraries we need to do the differential expression analysis.
+
+`library(BiocManager)
+library(DESeq2)
+library(readr)
+library(dplyr)
+library(magrittr)
+library(tximport)`
+
+Now we can read in the files we need:
+`run_table = read_csv('processed_reads/SraRunTable.txt')`
+
+
+`# quant.sf files for tximport
+sample_ids = pull(run_table, Run)
+count_files = paste0('processed_reads/',sample_ids, '/quant.sf')`
+
+`# read in gene_map.csv
+transcripts_mapped = read_csv('processed_reads/gene_map.csv',
+                              col_names = c("Gene_ID","Transcript_ID"))`
+
+`# read in quant.sf files using tximport
+count_data = tximport(files = count_files, type='salmon',
+                          ignoreTxVersion = TRUE, tx2gene = transcripts_mapped)`
+
+`# import data into DESeq2
+deseq_data = DESeqDataSetFromTximport(txi = count_data, colData = 
+                                      run_table, design = ~progression_step)`
+
+`# run DESeq2 analysis on data
+dds = DESeq(deseq_data)`
+
+`# get results
+dds_results = results(dds , contrast = c("progression_step","CaP","BPH"))`
+
+`# check each gene for differential expression
+dds_results$dif_exp = dds_results$padj < 0.05 & abs(dds_results$log2FoldChange) > 1
+dds_dif_exp_results = data.frame(dds_results)
+
+# use dplyr to filter dataframe for differentially expressed genes only
+dds_dif_exp_results = filter(dds_dif_exp_results, padj < 0.05)
+dds_dif_exp_results = filter(dds_dif_exp_results, abs(log2FoldChange) > 1)`
+
+`# MA plot
+plotMA(dds , alpha = 0.01, main = "MA plot")`
+
+`# PCA plot
+dds_var_transform = varianceStabilizingTransformation(deseq_data)
+plotPCA(dds_var_transform , intgroup = 'progression_step')`
 
