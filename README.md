@@ -148,12 +148,17 @@ DESeq2 code:
 -------------
 First, we need to load in the libraries we need to do the differential expression analysis.
 
-`library(BiocManager)
-library(DESeq2)
-library(readr)
-library(dplyr)
-library(magrittr)
-library(tximport)`
+`library(BiocManager)`
+
+`library(DESeq2)`
+
+`library(readr)`
+
+`library(dplyr)`
+
+`library(magrittr)`
+
+`library(tximport)`
 
 Now we can read in the files we need:
 
